@@ -16,7 +16,7 @@ def int_input(question):
 		return int_input("That was not an integer;  Try again. ")	
 
 def float_input(question):
-	''' Ask the user for an int, and let them try again.'''
+	''' Ask the user for an int or float, and let them try again.'''
 	
 	answer = input(question)
 	
@@ -26,7 +26,7 @@ def float_input(question):
 		return answer
 	except ValueError:
 		#recursive call
-		return int_input("That was not an integer;  Try again. ")	
+		return float_input("That was not an integer;  Try again. ")	
 
 base = float_input("Enter a base: ")
 exponent = int_input("Enter an exponent for the base: ")
